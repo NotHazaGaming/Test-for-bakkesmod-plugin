@@ -1,0 +1,10 @@
+#pragma once
+
+#include <bakkesmod/plugin/bakkesmodplugin.h>
+
+class AlphaBoost : public BakkesMod::Plugin::BakkesModPlugin
+{
+public:
+    virtual void onLoad();
+    virtual void onUnload();
+};
