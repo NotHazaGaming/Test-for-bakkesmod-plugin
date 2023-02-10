@@ -1,0 +1,20 @@
+#include "AlphaBoost.h"
+
+void AlphaBoost::onLoad()
+{
+    auto boost = [](std::string eventName)
+    {
+        auto player = GetLocalPlayer();
+        if (!player) return;
+
+        player->SetBoost(1.0f);
+    };
+
+    bindButton("Give Alpha Boost", boost);
+}
+
+void AlphaBoost::onUnload()
+{
+}
+
+BM_PLUGIN(AlphaBoost, "Alpha Boost", "0.1")
